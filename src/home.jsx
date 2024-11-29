@@ -50,7 +50,7 @@ const SplitWisely = () => {
   const shares = useMemo(() => calculateShares(), [participants, totalBill]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-200 via-pink-200 to-indigo-300 p-4 flex justify-center items-center">
+    <div className=" h-screen w-screen bg-gradient-to-br from-purple-200 via-pink-200 to-indigo-300 p-4 flex justify-center items-center">
       <div className="bg-white/80  shadow-2xl rounded-3xl p-6 w-full max-w-md border-4 border-pink-300 transform transition-all hover:scale-105">
         <h1 className="text-4xl font-extrabold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center">
           <Landmark className="mr-3 text-indigo-500" size={36} />
@@ -78,15 +78,16 @@ const SplitWisely = () => {
               type="text"
               value={participant.name}
               onChange={(e) => updateParticipant(index, 'name', e.target.value)}
-              className="w-1/2 px-3 py-2 border-2 border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-400 bg-grey/70"
+              className="w-1/2 px-3 py-2 border-2 border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-400 text-gray-500 bg-white/70"
               placeholder="Name"
             />
             <input
               type="number"
               value={participant.salary}
               onChange={(e) => updateParticipant(index, 'salary', e.target.value)}
-              className="w-1/2 px-3 py-2 border-2 border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-400 bg-grey/70"
+              className="w-1/2 px-3 py-2 border-2 border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-400 text-gray-500 bg-white/70"
               placeholder="Monthly Salary"
+              
             />
             {participants.length > 1 && (
               <button 
